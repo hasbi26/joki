@@ -1,0 +1,57 @@
+.product_details_title h2{
+	text-transform: capitalize;
+	font-weight: bold;
+}
+.product_details_title h4{
+	text-transform: capitalize  !important;
+	font-weight: bold;
+}
+.product_details_title table tr td{
+	text-transform: capitalize;
+}
+.tab_title{
+	margin-bottom: 3px !important;
+}
+.single_product_image{
+	border-radius: 14px;
+	overflow: hidden;
+}
+.cv-carousel{
+	height: 395px !important;
+	position: relative;
+	margin-left: 42px;
+	margin-top: 64px;
+}
+.cv-carousel .item{
+	height: 90px !important;
+	overflow: hidden;
+	border-radius: 8px;
+}
+.cv-item{
+	height: 90px !important;
+}
+.cv-carousel img{
+	width: 100px;
+	cursor: pointer;
+}
+.cv-nav{
+	margin-right: 0 !important;
+	margin-left: 14px;
+	top: 0;
+	height: auto;
+	float: none !important;
+	position: absolute !important;
+	transform: none !important;
+	height: 100%;
+}
+.cv-nav .cv-prev{
+	margin-top: -38px;
+}
+.cv-nav .cv-next{
+	bottom: 0 !important;
+	position: absolute !important;
+	margin-bottom: -38px;
+}
+.breadcrumbs .active{
+	text-transform: capitalize;
+}
