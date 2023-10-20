@@ -51,8 +51,24 @@
   <img src="<?= base_url()?>assets\logo\logo.png" width="70" height="auto" class="d-inline-block align-top" alt="">
 
   <div class="d-inline-block align-top" alt="" style="margin-right: 10;">
-   <a href="auth"> <img src="<?= base_url()?>assets\logo\log-in.png" width="40" height="auto">
-      </a>
+   <!-- <a href="auth"> <img src="<?= base_url()?>assets\logo\log-in.png" width="40" height="auto">
+      </a> -->
+
+      <div class="col-sm-3">
+      <!--  -->
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <?= $user['name']; ?>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="user">Profil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="auth/logout">Logout</a></li>
+          </ul>
+
+
+
+                    <!-- <img src="<?= base_url('assets/img/profile/' . $user['image']); ?>" alt="" width="40" height="auto" > -->
+       </div>
 <div>
 </nav>
 
@@ -152,7 +168,7 @@
                                 <div class="card-body">
                                   <img src="<?= base_url(); ?>assets/images/${param}/${param == 'Aksesoris' ? product.namaItem : product.nopol}/${param == 'Aksesoris' ? product.foto1 : product.fotodepan}" class="img-fluid">
                                   <h5 class="card-title mt-2">${product.merk + ' ' + product.namaItem + ' ' + product.namaItem + (product.tahun ? ' ' + product.tahun : '')}</h5>
-                                  <div class="price">Rp. ${product.harga}</div>
+                                  <div class="price">Rp. ${formatRupiah(product.harga)}</div>
                                   <a href="welcome/detailProduct/${product.id}/${param}" class="btn btn-warning btn-xs btn-block text-white">Detail</a>
                                 </div>
                               </div>
@@ -217,7 +233,7 @@
                                 <div class="card-body">
                                   <img src="<?= base_url(); ?>assets/img/Product/${product.image}" class="img-fluid">
                                   <h5 class="card-title mt-2">${product.nama}</h5>
-                                  <div class="price">Rp. ${product.harga}</div>
+                                  <div class="price">Rp. ${formatRupiah(product.harga)}</div>
                                   <a href="" class="btn btn-warning btn-xs btn-block text-white">Pesan</a>
                                 </div>
                               </div>
@@ -335,7 +351,7 @@
                                 <div class="card-body">
                                   <img src="<?= base_url(); ?>assets/images/${paramIs}/${paramIs == 'Aksesoris' ? product.namaItem : product.nopol}/${paramIs == 'Aksesoris' ? product.foto1 : product.fotodepan}" class="img-fluid">
                                   <h5 class="card-title mt-2">${product.merk + ' ' + product.namaItem + ' ' + product.namaItem + (product.tahun ? ' ' + product.tahun : '')}</h5>
-                                  <div class="price">Rp. ${product.harga}</div>
+                                  <div class="price">Rp. ${formatRupiah(product.harga)}</div>
                                   <a href="welcome/detailProduct/${product.id}/${paramIs}" class="btn btn-warning btn-xs btn-block text-white">Detail</a>
                                 </div>
                               </div>

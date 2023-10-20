@@ -38,10 +38,13 @@
               </form>
               <hr>
               <div class="text-center">
-                <a class="small" href="<?= base_url('auth/forgot_password'); ?>">Forgot Password?</a>
+                <a class="small" href="<?= base_url('auth/forgot_password'); ?>">Lupa Password?</a>
               </div>
               <div class="text-center">
-                <a class="small" href="<?= base_url('auth/registrasion'); ?>">Create an Account!</a>
+                <a class="small" href="<?= base_url('auth/registrasion'); ?>">Mendaftar Member</a>
+              </div>
+              <div class="text-center">
+                <a class="small" href="<?= base_url('main'); ?>">Kembali Ke halaman Utama</a>
               </div>
             </div>
           </div>

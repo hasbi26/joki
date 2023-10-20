@@ -44,7 +44,7 @@ class Auth extends CI_Controller
 						if ($data['role_id'] == 1) {
 							redirect('administrator');
 						} elseif ($data['role_id'] == 2) {
-							redirect('main');
+							redirect('user');
 						}
 					} else {
 						$this->Flasher_model->flashdata('wrong password', 'Failed', 'danger');
