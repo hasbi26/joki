@@ -115,7 +115,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <h5>Pilihan Kategori</h5>
     </div>
     <ul class="sidebar_categories">
-      <li class="sidebar_category active"><a href="#" id="default" onclick="tampil_data_barang('Mobil', this)">Jasa</a></li>
+      <li class="sidebar_category active"><a href="#" id="default" onclick="tampil_data_barang('Jasa', this)">Jasa</a></li>
       <li class="sidebar_category"><a href="#" onclick="tampil_data_barang('Motor', this)">UMKM</a></li>
       <li class="sidebar_category"><a href="#" onclick="tampil_data_barang('Aksesoris', this)">Promo</a></li>
     </ul>
@@ -287,7 +287,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		console.log("aduh")
 	}
 
-	tampil_data_barang("Mobil",$("#default")[0]);
+	tampil_data_barang("Jasa",$("#default")[0]);
 
 
 	$(document).ready(function() {
@@ -384,7 +384,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     // '<h5 class="card-title"><span class="new-price">Rp. ' + formatRupiah(product.harga) + '</span></h5> ' +
 	'<div class="product_price">Rp. ' +  formatRupiah(product.harga) + '</div>' +
     '<p class="card-text"><h5 class="dress-name">' + product.nama + '</h5></p> ' +
-    '<a href="" class="btn btn-warning">Pesan</a>' +
+    '<a href="https://wa.me/6285933255498?text=Pesan Ojeg Min" class="btn btn-warning">Pesan</a>' +
   '</div>' +
   '</div>' +
 '</div>' ;

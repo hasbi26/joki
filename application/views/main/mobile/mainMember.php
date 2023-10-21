@@ -234,7 +234,7 @@
                                   <img src="<?= base_url(); ?>assets/img/Product/${product.image}" class="img-fluid">
                                   <h5 class="card-title mt-2">${product.nama}</h5>
                                   <div class="price">Rp. ${formatRupiah(product.harga)}</div>
-                                  <a href="" class="btn btn-warning btn-xs btn-block text-white">Pesan</a>
+                                  <a href="https://wa.me/6285933255498?text=Pesan Ojeg Min" class="btn btn-warning btn-xs btn-block text-white">Pesan</a>
                                 </div>
                               </div>
                             </div>`;
