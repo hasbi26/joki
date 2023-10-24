@@ -32,6 +32,14 @@
             height: auto; /* Mengatur ketinggian gambar sesuai proporsi */
         }
 
+footer a {
+
+  padding : 4px;
+
+}
+
+
+
 	</style>
 
 
@@ -60,7 +68,7 @@
 
 	<section class="container">
 
-<img src="<?= base_url()?>assets\logo\banner1.png"  style="height:190; margin-left: 20px ">
+<img src="<?= base_url()?>assets\logo\banner1.png"  style="height:180; margin-left: 5px ">
 
 
       <!-- </div> -->

@@ -12,9 +12,9 @@ class Main extends CI_Controller
    public function index()
    {
 
+
     if (!empty($this->session->userdata('email')))
     {
-        // $data['product'] = $this->db->get('jasa')->result_array();
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['product']  = $this->db->get_where('jasa',array('type'=>'0'))->row_array();
 
@@ -45,6 +45,8 @@ class Main extends CI_Controller
 
 
    public function getJasa(){
+
+   
 
     $data =[] ;
     $param = $this->input->post('postdata');

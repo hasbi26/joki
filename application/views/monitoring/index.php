@@ -3,7 +3,7 @@
 	<div class="card shadow mb-4">
 		<div class="card-header py-3 d-flex justify-content-between">
 		  	<h6 class="m-0 font-weight-bold text-primary"><?= $title_page; ?></h6>
-		  	<a href="#" class="btn-sm btn-primary" data-toggle="modal" data-target="#formModal" data-url="<?= base_url(); ?>" id="addNewMenu">Add New Menu</a>
+		  	<!-- <a href="#" class="btn-sm btn-primary" data-toggle="modal" data-target="#formModal" data-url="<?= base_url(); ?>" id="addNewMenu">Add New Menu</a> -->
 		</div>
 
 		<?php if (!empty($error)) { ?>
@@ -17,10 +17,11 @@
 			        <tr>
 						<th style="max-width: 5%;">No</th>
 						<th style="width: 70%; min-width: 250px;">Nama</th>
-						<th style="width: 70%; min-width: 250px;">Jenis</th>
-						<th style="width: 70%; min-width: 250px;">Type</th>
-						<th style="width: 70%; min-width: 250px;">Harga</th>
-						<th style="width: 25%; min-width: 200px;">Action</th>
+						<th style="width: 70%; min-width: 250px;">Saldo</th>
+						<th style="width: 70%; min-width: 250px;">Alamat</th>
+						<th style="width: 70%; min-width: 250px;">No Wa</th>
+						<th style="width: 25%; min-width: 200px;">Email</th>
+						<th style="width: 25%; min-width: 200px;">Tanggal Join</th>
 			        </tr>
 			      </thead>
 			      <tbody>
@@ -29,14 +30,17 @@
 			      	foreach($product as $m): ?>
 			      	<tr>
 			      		<td><?= ++$number; ?></td>
-			      		<td><?= $m['nama']; ?></td>
-			      		<td><?= $m['jenis']; ?></td>
-			      		<td><?= ($m['type'] == 0) ? 'member' : 'umum'; ?></td>
-			      		<td><?= $m['harga']; ?></td>
-			      		<td>
+			      		<td><?= $m['name']; ?></td>
+			      		<td><?= $m['saldo']; ?></td>
+			      		<td><?= $m['alamat']  ?></td>
+			      		<td><?= $m['kontak']; ?></td>
+			      		<td><?= $m['email']; ?></td>
+			      		<!-- <td><?= $m['date_create'] ?></td> -->
+                          <td><?= date('Y-m-d H:i:s', $m['date_create']) ?></td>
+			      		<!-- <td>
 			      			<a href="#" class="btn-sm btn-warning p-2 tampilModalUbah" data-id="<?= $m['id']; ?>" data-url="<?= base_url(); ?>" data-toggle="modal" data-target="#formModalEdit">Edit</a>		
 							<a href="#" class="btn-sm btn-danger p-2 tampilModalAlert" data-id="<?= $m['id']; ?>" data-url="<?= base_url(); ?>" data-toggle="modal" data-target="#alertModal">Delete</a>		
-			      		</td>
+			      		</td> -->
 			      	</tr>
 				    <?php endforeach; ?>
 			      </tbody>

@@ -32,6 +32,13 @@
             height: auto; /* Mengatur ketinggian gambar sesuai proporsi */
         }
 
+        footer a {
+
+padding : 10px;
+
+}
+
+
 	</style>
 
 
@@ -56,14 +63,19 @@
 
       <div class="col-sm-3">
       <!--  -->
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <?= $user['name']; ?>
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+      Saldo Rp. <?= $user['saldo']; ?>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="user">Profil</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="auth/logout">Logout</a></li>
           </ul>
+
+          <!-- <div class="d-inline-block align-top" alt="" style="margin-right: 20px;"> -->
+   <!-- <a href="auth"> <img src="<?= base_url()?>assets\logo\log-in.png" width="40" height="auto">
+      </a> -->
+<div>
 
 
 
@@ -76,7 +88,7 @@
 
 	<section class="container">
 
-<img src="<?= base_url()?>assets\logo\banner1.png"  style="height:190; margin-left: 20px ">
+<img src="<?= base_url()?>assets\logo\banner1.png"  style="height:180; margin-left: 5px ">
 
 
       <!-- </div> -->

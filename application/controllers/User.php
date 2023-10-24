@@ -7,6 +7,7 @@ class User extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->library('user_agent');
 		is_logged_in();
 	}
 
@@ -14,11 +15,28 @@ class User extends CI_Controller
 	{
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['title_page'] = "My Profile";
-		$this->load->view('templates/sitemain/header', $data);
-		$this->load->view('templates/sitemain/sidebar', $data);
-		$this->load->view('templates/sitemain/topbar', $data);
-		$this->load->view('user/page/profile', $data);
-		$this->load->view('templates/sitemain/footer');
+
+
+		if($this->agent->is_mobile()){
+            // $this->load->view('main/header');
+            $this->load->view('user/mobile/index', $data);
+            $this->load->view('main/footer');
+			
+ 
+        }else{
+
+			$this->load->view('templates/sitemain/header', $data);
+			$this->load->view('templates/sitemain/sidebar', $data);
+			$this->load->view('templates/sitemain/topbar', $data);
+			$this->load->view('user/page/profile', $data);
+			$this->load->view('templates/sitemain/footer');
+
+
+        }
+
+
+
+
 	}
 
 	public function changepassword()

@@ -9,9 +9,12 @@ function is_logged_in()
 		$role_id = $ci->session->userdata('role_id');
 		$menu = $ci->uri->segment(1);
 
-		// cek hak akses
 		$queryMenu = $ci->db->get_where('user_menu', ['menu' => $menu])->row_array();
 		$menu_id = $queryMenu['id'];
+
+
+
+
 
 		// // cek sub menu aktive atau tidak
 		// $subMenu = $menu; 
@@ -23,11 +26,13 @@ function is_logged_in()
 		// if (is_null($result['is_active'])) {
 		// 	$result['is_active'] = 1;
 		// }
-
+		
 		$queryAcces = $ci->db->get_where('user_access_menu', [
 			'role_id' => $role_id,
 			'menu_id' => $menu_id
 		]);
+
+
 		if ($queryAcces->num_rows() < 1) {
 			redirect('auth/blocked');
 		} 
