@@ -79,9 +79,6 @@ padding : 10px;
 		</ul>
 
 
-        Lakukan Transfer Ke No Berikut
-
-
    
 
 
@@ -96,7 +93,53 @@ padding : 10px;
 
 
 
-		<div class="row product-grid"></div>
+		<div class="row product-grid">
+
+    <p>    Top Up Saldo Anda Dengan mentransfer ke rekening yang tersedia di bawah ini 
+      (Kirimkan Bukti Transfer Ke no Whatsapp Admin)
+</p>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        BRI
+
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+      <img src="<?= base_url()?>assets\logo\BRI.png" width="20px" height="auto" class="d-inline-block align-top" alt="">
+  
+  :    4430 0102 9864 533</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        BNI
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+      <img src="<?= base_url()?>assets\logo\BNI.png" width="30px" height="auto" class="d-inline-block align-top" alt="">    :      1791557938</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        E wallet (Dana,Ovo,Gopay)
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Sedang Dalam Pengerjaan</div>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
 	</section>
 
 
